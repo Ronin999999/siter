@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mines Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Шапка -->
+    <div class="header">
+      <button class="btn-back">Назад</button>
+      <div class="balance-group">
+        <button id="balanceBtn" class="btn-balance">45 189,51 ₽</button>
+        <button class="btn-deposit">Пополнить</button>
+      </div>
+    </div>
+
+    <!-- Игровое поле -->
+    <div class="game-area">
+      <h1>САУЕMINES</h1>
+      <div class="game-tabs">
+        <span>Live</span>
+        <span>Мои</span>
+      </div>
+
+      <div id="gameGrid" class="grid"></div>
+
+      <div class="game-info">
+        <div class="info-row">
+          <span>Макс. выигрыш</span>
+          <span class="value">35 144 ₽</span>
+        </div>
+        <div class="info-row">
+          <span>Ловушек</span>
+          <span class="value">3</span>
+        </div>
+        <div class="bet-controls">
+          <input type="number" id="betInput" value="16" min="1">
+          <button class="btn-play">Играть</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Пополнение баланса -->
+    <div id="depositModal" class="modal">
+      <div class="modal-content">
+        <h3>Пополнить баланс</h3>
+        <input type="number" id="depositInput" placeholder="Сумма">
+        <div class="modal-buttons">
+          <button id="confirmDeposit" class="btn-confirm">Подтвердить</button>
+          <button id="cancelDeposit" class="btn-cancel">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
